@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+/* for toggling dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* apply dark styling for body */
+body {
+    @apply bg-white text-blue-950;
+
+    @variant dark {
+        @apply bg-blue-950 text-white;
+    }
+}

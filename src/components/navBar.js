@@ -12,7 +12,7 @@ class NavBar extends HTMLElement {
                     <p>|</p>
                     <p>Say Hello Around the World</p>
                 </div>
-                <button><span>icon</span> Dark Mode</button>
+                <button class="toggle-btn"><span>icon</span> Dark Mode</button>
             </div>
         `
     }
@@ -28,4 +28,12 @@ window.addEventListener("load", () => {
     navContent.classList.add('w-full', 'px-15');
     // append the new instance on page load
     navContainer.appendChild(navContent);
+
+    const toggleButton = document.querySelector(".toggle-btn");
+
+    toggleButton.addEventListener("click", () => {
+        console.log("toggle button clicked");
+        const bodyEl = document.body;
+        bodyEl.classList.toggle("dark");
+    });
 });
