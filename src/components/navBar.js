@@ -6,13 +6,13 @@ class NavBar extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-            <div class="flex flex-row justify-between">
+            <div class="flex flex-row justify-between items-center">
                 <div class="title-section flex flex-row gap-4">
-                    <h1>Globello</h1>
+                    <p class="m-0">Globello</p>
                     <p>|</p>
                     <p>Say Hello Around the World</p>
                 </div>
-                <button class="toggle-btn"><span>icon</span> Dark Mode</button>
+                <button class="toggle-btn"><span class="mr-4"><i class="bi bi-moon-stars"></i></span>Dark Mode</button>
             </div>
         `
     }
@@ -35,5 +35,12 @@ window.addEventListener("load", () => {
         console.log("toggle button clicked");
         const bodyEl = document.body;
         bodyEl.classList.toggle("dark");
+
+        // conditional for inner text change
+        if (bodyEl.classList.contains("dark")) {
+            toggleButton.innerHTML = `<span class="mr-4"><i class="bi bi-sun"></i></span>Light Mode`
+        } else {
+            toggleButton.innerHTML = `<span class="mr-4"><i class="bi bi-moon-stars"></i></span>Dark Mode`
+        }
     });
 });
