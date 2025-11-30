@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Globello | Language Learning</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&family=Rock+3D&display=swap" rel="stylesheet">
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="./src/output.css" rel="stylesheet">
@@ -12,10 +16,10 @@
 <body>
     <header>
         <!-- use JS to load nav content -->
-        <nav id="nav-container" role="navigation" class="flex flex-row items-center h-[10vh] shadow-md"></nav>
+        <nav id="nav-container" role="navigation" class="flex flex-row items-center h-fit p-5 shadow-md"></nav>
 
         <!-- hero section -->
-        <section aria-label="hero section" class="bg-amber-100 dark:bg-blue-900 px-15 py-20 flex flex-col md:flex-row justify-around items-center">
+        <section aria-label="hero section" class="bg-cream dark:bg-blue-900 px-15 py-20 flex flex-col md:flex-row justify-around items-center">
             <img src="./src/assets/hellos.gif" alt="gif of hellos in english, french, spanish, portuguese, italian, dutch" class="w-sm h-fit">
             <div class="hero-text flex flex-col gap-9">
                 <h1>Welcome to Globello!</h1>
@@ -28,7 +32,7 @@
                         <li><i class="bi bi-caret-right-fill pr-1.5"></i>Click a country to see greetings</li>
                     </ul>
                 </div>
-                <a href="#" class="hero-cta px-6 py-3 rounded-2xl font-medium items-center bg-white dark:bg-blue-950 w-fit self-center shadow-md">Get Started</a>
+                <a href="#" class="hero-cta px-6 py-3 rounded-2xl font-normal items-center bg-turquoise hover:bg-sky border-3 hover:font-bold border-blac dark:bg-blue-950 w-fit self-center shadow-md transition-all duration-300">Get Started</a>
             </div>
         </section>
 

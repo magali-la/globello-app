@@ -1,17 +1,45 @@
 @import "tailwindcss";
 
+/* themes - global styles */
+@theme {
+    /* typography */
+    --font-rock: 'Rock 3D', cursive;
+    --font-grand: 'Grandstander', sans-serif;
+    --font-lexend: 'Lexend', sans-serif;
+
+    /* colors */
+    --color-sky: #00b2ec;
+    --color-turquoise: #38d7ba;
+    --color-tomato: #ff5733;
+    --color-school: #ffc600;
+    --color-peony: #f367ee;
+    --color-babypink: #ffa8cb;
+    --color-blac: #222222;
+    --color-cream: #fff8e7;
+}
+
 /* for toggling dark mode */
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* apply dark styling for body */
 body {
-    @apply bg-white text-blue-950;
+    @apply bg-white text-blac font-lexend text-lg;
 
     @variant dark {
         @apply bg-blue-950 text-white;
     }
 }
 
+/* typography */
+h1 {
+    @apply font-grand font-semibold text-3xl; 
+}
+h2 {
+    @apply font-grand font-semibold text-2xl;
+}
+
+
+/* buttons */
 .toggle-btn {
     @apply border-gray-500 bg-blue-950 text-white px-6 py-3 rounded-2xl font-medium;
 
