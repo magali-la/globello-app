@@ -3,9 +3,9 @@
 /* themes - global styles */
 @theme {
     /* typography */
-    --font-rock: 'Rock 3D', cursive;
-    --font-grand: 'Grandstander', sans-serif;
-    --font-lexend: 'Lexend', sans-serif;
+    --font-rock: "Rock 3D", cursive;
+    --font-grand: "Grandstander", sans-serif;
+    --font-lexend: "Lexend", sans-serif;
 
     /* colors */
     --color-sky: #00b2ec;
@@ -23,7 +23,7 @@
 
 /* apply dark styling for body */
 body {
-    @apply bg-white text-blac font-lexend text-lg;
+    @apply bg-white font-lexend text-lg text-blac;
 
     @variant dark {
         @apply bg-blue-950 text-white;
@@ -32,16 +32,15 @@ body {
 
 /* typography */
 h1 {
-    @apply font-grand font-semibold text-3xl; 
+    @apply font-grand text-3xl font-semibold;
 }
 h2 {
-    @apply font-grand font-semibold text-2xl;
+    @apply font-grand text-2xl font-semibold;
 }
-
 
 /* buttons */
 .toggle-btn {
-    @apply border-gray-500 bg-blue-950 text-white px-6 py-3 rounded-2xl font-medium;
+    @apply rounded-2xl border-gray-500 bg-blue-950 px-6 py-3 font-medium text-white;
 
     @variant dark {
         @apply bg-white text-blue-950;
