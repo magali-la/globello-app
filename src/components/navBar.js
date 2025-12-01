@@ -6,8 +6,8 @@ class NavBar extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-            <div class="flex flex-row justify-between items-center">
-                <div class="title-section flex flex-row gap-10 justify-center items-end">
+            <div class="flex flex-col gap-4 md:flex-row justify-between items-center">
+                <div class="title-section flex flex-col md:flex-row gap-10 justify-center items-end">
                     <p class="font-rock font-bold text-5xl dark:font-medium">globello</p>
                     <p>Say Hello Around the World</p>
                 </div>

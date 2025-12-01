@@ -22,7 +22,7 @@
         <!-- hero section -->
         <section aria-label="hero section" class="bg-cream dark:bg-blue-900 px-15 py-20 flex flex-col md:flex-row justify-around items-center">
             <img src="./src/assets/hellos.gif" alt="gif of hellos in english, french, spanish, portuguese, italian, dutch" class="w-sm h-fit">
-            <div class="hero-text flex flex-col gap-9">
+            <div class="hero-text flex flex-col gap-9 mt-6">
                 <h1>Welcome to Globello!</h1>
                 <p>Discover how to say hello across the world! Learn multiple greetings, including regional variations and slang!</p>
                 <div class="space-y-4">
@@ -40,7 +40,7 @@
 
     <main class="flex flex-col gap-12 my-10">
         <!-- search and filter section -->
-        <section id="searchSection" class="flex flex-col md:flex-row h-fit px-15 justify-between items-center">
+        <section id="searchSection" class="flex flex-col md:flex-row h-fit px-15 gap-8 justify-between items-center">
             <label for="countrySearch" class="hidden">Country Search</label>
             <!-- search bar -->
             <div class="flex flex-row gap-6 items-center border-3 border-blac dark:border-cream rounded-2xl p-3 focus-within:ring-offset-2 focus-within:ring-3 focus-within:ring-tomato">
@@ -65,11 +65,11 @@
             <h2>Countries</h2>
 
             <!-- grid -->
-            <div id="countryCardGrid" class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+            <div id="countryCardGrid" class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             </div>
 
             <!-- country card template -->
-            <div class="templateCountryCard hidden flex flex-col gap-4 rounded-3xl w-full border-3 border-blac justify-between overflow-hidden">
+            <div class="templateCountryCard hidden flex dark:border-cream flex-col gap-4 rounded-3xl w-full border-3 border-blac justify-between overflow-hidden">
                 <img src="" alt="" class="w-full object-contain">
                 <!-- country content div -->
                 <div class="countryContent flex flex-col gap-4 px-4 pb-4 justify-between">
