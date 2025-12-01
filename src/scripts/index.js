@@ -38,6 +38,20 @@ window.addEventListener("load", () => {
             let countryCapital = clonedCountryCard.querySelector(".countryCapital");
             regionName.innerText = `${country.region}`;
             countryCapital.innerText = `${country.capital}`;
+
+            // add languages
+            const langContainer = clonedCountryCard.querySelector(".languagesContainer");
+            const langLabel = clonedCountryCard.querySelector(".templateLangLabel");
+            langLabel.innerText = ''
+            
+
+            Object.values(country.languages).forEach(language => {
+                const clonedLangLabel = langLabel.cloneNode(true);
+                clonedLangLabel.classList.remove('hidden');
+                clonedLangLabel.innerText = language;
+                // append it to the container
+                langContainer.append(clonedLangLabel);
+            });
     
             // append the clonedCard to the grid
             countryCardGrid.append(clonedCountryCard);
