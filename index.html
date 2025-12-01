@@ -39,7 +39,7 @@
 
     <main class="flex flex-col gap-12 mt-10">
         <!-- search and filter section -->
-        <section class="flex flex-col md:flex-row h-fit px-15 justify-between">
+        <section class="flex flex-col md:flex-row h-fit px-15 justify-between items-center">
             <label for="countrySearch" class="hidden">Country Search</label>
             <!-- search bar -->
             <div class="flex flex-row gap-6 items-center border-3 border-blac dark:border-cream rounded-2xl p-3 focus-within:ring-offset-2 focus-within:ring-3 focus-within:ring-tomato">
@@ -47,6 +47,12 @@
                 <input type="text" id="countrySearch" placeholder="Search for a country..." class="text-lg outline-none">
             </div>
 
+            <!-- filter dropdown -->
+            <label for="filterButton" class="hidden">Region Filters</label>
+            <button id="filterButton" class="flex flex-row gap-6 relative w-fit rounded-2xl border-3 border-blac dark:border-cream p-3 focus-within:ring-offset-2 focus-within:ring-3 focus-within:ring-tomato cursor-pointer" aria-label="filter countries by region">
+                <span>Filter by Region</span>
+                <i class="bi bi-filter text-2xl"></i>
+            </button>
         </section>
 
         <!-- country grid section -->
