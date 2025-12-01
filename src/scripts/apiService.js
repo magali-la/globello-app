@@ -2,7 +2,7 @@
 export async function fetchAllCountries() {
     try {
         console.log(`Attempting to retrieve API country data`);
-        const response = await fetch('https://restcountries.com/v3.1/all?fields=name,capital,region,borders,nativeName,flag,languages');
+        const response = await fetch('https://restcountries.com/v3.1/all?fields=name,capital,region,borders,flags,languages');
 
         // use fetch methods to identify errors
         if (!response.ok) {
