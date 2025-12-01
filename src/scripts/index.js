@@ -102,3 +102,22 @@ regionFilter.addEventListener("change", (event) => {
     // call to diplay matching countries
     displayAllCountries(filteredCountries)
 });
+
+// hello button functionality
+document.addEventListener("click", (event) => {
+    // conditional to find the closest hello button to navigate to the country page
+    if (event.target.closest('.helloButton')){
+        // store the name of the country being clicked
+        const countryCardSelected = event.target.closest('.helloButton').closest('.templateCountryCard');
+
+        // store the name of the country selected
+        let countryCardSelectedName = countryCardSelected.querySelector('.countryName');
+        console.log(countryCardSelectedName.innerText);
+
+        // store the last clicked name in local storage to use in the country.js
+        localStorage.setItem('selectedCountry', countryCardSelectedName.innerText);
+
+        // navigate to the country detail page
+        window.location.href = 'country.html';
+    }
+});
