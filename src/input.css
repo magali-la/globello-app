@@ -37,6 +37,9 @@ h1 {
 h2 {
     @apply font-grand text-2xl font-semibold;
 }
+h5 {
+    @apply text-xl font-medium;
+}
 
 /* buttons */
 .toggle-btn {

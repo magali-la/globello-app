@@ -32,6 +32,12 @@ window.addEventListener("load", () => {
             if (country.name.common !== country.name.official){
                 officialName.innerText = `${country.name.official}`;
             }
+
+            // add region and capital to card
+            let regionName = clonedCountryCard.querySelector(".regionName");
+            let countryCapital = clonedCountryCard.querySelector(".countryCapital");
+            regionName.innerText = `${country.region}`;
+            countryCapital.innerText = `${country.capital}`;
     
             // append the clonedCard to the grid
             countryCardGrid.append(clonedCountryCard);
