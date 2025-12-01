@@ -3,6 +3,7 @@ import { fetchAllCountries } from "./apiService.js";
 // define global variables for DOM elements
 const countryCardGrid = document.querySelector("#countryCardGrid");
 const searchInput = document.querySelector("#countrySearch");
+const regionFilter = document.querySelector("#regionFilter");
 let countryData = [];
 
 // run the fetch all country data and store in a variable to display in the grid
@@ -84,4 +85,20 @@ searchInput.addEventListener("input", (event) => {
 
     // run display countries function with filtered items
     displayAllCountries(searchFilter);
+});
+
+// region filter functionality
+regionFilter.addEventListener("change", (event) => {
+    let selectedRegion = event.target.value;
+    let filteredCountries;
+    // if the region selected isn't the default empty value, then set the filter
+    if (selectedRegion !== ''){
+        filteredCountries = countryData.filter(country => country.region === selectedRegion);
+    } else {
+        // display the default when the user is on the default placeholder item
+        filteredCountries = countryData;
+    }
+
+    // call to diplay matching countries
+    displayAllCountries(filteredCountries)
 });
