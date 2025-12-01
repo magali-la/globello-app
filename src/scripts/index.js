@@ -16,11 +16,22 @@ window.addEventListener("load", () => {
         countryData.forEach(country => {
             // clone a template 
             let clonedCountryCard = templateCountryCard.cloneNode(true);
+            clonedCountryCard.classList.remove('hidden');
 
-            // define elements on cloned card
+            // add flag to card
             let flagImg = clonedCountryCard.querySelector("img");
             flagImg.src = `${country.flags.svg}`;
             flagImg.alt = `${country.flags.alt}`;
+
+            // add name to card
+            let countryName = clonedCountryCard.querySelector(".countryName");
+            let officialName = clonedCountryCard.querySelector(".officialName");
+            countryName.innerText = `${country.name.common}`;
+
+            // logic to display official name if it's different from countryName
+            if (country.name.common !== country.name.official){
+                officialName.innerText = `${country.name.official}`;
+            }
     
             // append the clonedCard to the grid
             countryCardGrid.append(clonedCountryCard);

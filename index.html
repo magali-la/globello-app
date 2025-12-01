@@ -64,12 +64,14 @@
             <div id="countryCardGrid" class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
 
                 <!-- country card -->
-                <div class="templateCountryCard flex flex-col gap-4 rounded-3xl w-full border-3 border-blac justify-between overflow-hidden">
-                    <img src="" alt="">
+                <div class="templateCountryCard hidden flex flex-col gap-4 rounded-3xl w-full border-3 border-blac justify-between overflow-hidden">
+                    <img src="" alt="" class="w-full object-contain">
                     <!-- country content div -->
-                    <div class="countryContent flex flex-col gap-4 px-4 pb-4">
-                        <h4 class="countryName"></h4>
-                        <p class="nativeName"></p>
+                    <div class="countryContent flex flex-col gap-4 px-4 pb-4 justify-between">
+                        <div class="flex flex-col flex-wrap gap-2 text-right">
+                            <h4 class="countryName text-3xl"></h4>
+                            <p class="officialName italic"></p>
+                        </div>
                         <h5>Region</h5>
                         <p class="regionName"></p>
                         <h5>Capital</h5>
