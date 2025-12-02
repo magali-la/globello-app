@@ -28,9 +28,11 @@ async function displayAllCountries(countryData) {
         let officialName = clonedCountryCard.querySelector(".officialName");
         countryName.innerText = `${country.name.common}`;
 
-        // logic to display official name if it's different from countryName
+        // logic to display official name if it's different from countryName, else clear the inner text if it matches
         if (country.name.common !== country.name.official){
             officialName.innerText = `${country.name.official}`;
+        } else {
+            officialName.innerText = '';
         }
 
         // add region and capital to card
@@ -57,9 +59,7 @@ async function displayAllCountries(countryData) {
         // append the clonedCard to the grid
         countryCardGrid.append(clonedCountryCard);
     });
-
-
-}
+};
 
 // Event listener to display country data in grid
 window.addEventListener("load", async () => {
@@ -82,6 +82,7 @@ searchInput.addEventListener("input", (event) => {
     const searchFilter = countryData.filter(country => 
         country.name.common.toLowerCase().includes(userSearch)
     );
+    console.log(searchFilter);
 
     // run display countries function with filtered items
     displayAllCountries(searchFilter);
