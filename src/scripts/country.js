@@ -38,17 +38,16 @@ window.addEventListener("load", async () => {
 
     // add languages
 
-    // add border countries
-        const bordersContainer = document.querySelector(".bordersContainer");
-        // // clear what's in the lang container to accommodate search results
-        // bordersContainer.innerHTML = '';
-        
-        // conditional if there are no border countries
-        if (selectedCountryObj[0].borders.length === 0);
-        bordersContainer.innerHTML = `<p class="italic">No border countries</p>`
-        
-
-       selectedCountryObj[0].borders.forEach(borderCountry => {
+// add border countries
+    const bordersContainer = document.querySelector(".bordersContainer");
+    // // clear what's in the lang container to accommodate search results
+    // bordersContainer.innerHTML = '';
+    
+    // conditional if there are no border countries
+    if (selectedCountryObj[0].borders.length === 0){
+        bordersContainer.innerHTML = `<p class="italic">This country has no border countries.</p>`
+    } else {
+        selectedCountryObj[0].borders.forEach(borderCountry => {
             // create the element in the DOM
             const borderLabel = document.createElement('span');
             borderLabel.classList.add('templateLangLabel', 'px-2', 'py-1', 'rounded-lg', 'bg-peony', 'text-base');
@@ -56,4 +55,5 @@ window.addEventListener("load", async () => {
             // append it to the container
             bordersContainer.append(borderLabel);
         });
+    };
 });
