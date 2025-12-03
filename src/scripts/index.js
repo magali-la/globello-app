@@ -50,7 +50,7 @@ async function displayAllCountries(countryData) {
         Object.values(country.languages).forEach(language => {
             // create the element in the DOM
             const langLabel = document.createElement('span');
-            langLabel.classList.add('templateLangLabel', 'px-2', 'py-1', 'rounded-lg', 'bg-school', 'text-base');
+            langLabel.classList.add('templateLangLabel', 'px-2', 'py-1', 'rounded-lg', 'bg-school', 'text-base', 'dark:text-blac', 'dark:border-2', 'dark:border-cream');
             langLabel.innerText = language;
             // append it to the container
             langContainer.append(langLabel);

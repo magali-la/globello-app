@@ -26,7 +26,7 @@ body {
     @apply bg-white font-lexend text-lg text-blac;
 
     @variant dark {
-        @apply bg-blue-950 text-white;
+        @apply bg-blue-950 text-cream;
     }
 }
 
