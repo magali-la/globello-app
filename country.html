@@ -11,6 +11,14 @@
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="./src/output.css" rel="stylesheet">
+    <!-- custom script for color mode preference -->
+    <script>
+        // check which mode preference before loading the dom
+        let onDarkMode = localStorage.getItem("darkMode");
+        if (onDarkMode === 'true'){
+            document.documentElement.classList.add('dark')
+        }
+    </script>
     <script src="./src/components/navBar.js" defer></script>
     <script src="./src/scripts/country.js" type="module" defer></script>
 </head>

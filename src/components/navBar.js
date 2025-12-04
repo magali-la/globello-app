@@ -30,28 +30,20 @@ window.addEventListener("load", () => {
 
     // dark mode logic - define variables for toggle button and the body element where tailwind dark class toggles
     const toggleButton = document.querySelector(".toggle-btn");
-    const bodyEl = document.body;
+    const htmlEl = document.documentElement;
 
-    // create variable for whether dark mode is on or not with default false, which is regular mode if a user never clicks the button while using the site
-    let onDarkMode = localStorage.getItem("darkMode") || false;
-
-    // conditional to set the dark mode 
+    // conditional to set the dark mode button if dark was the preference
     if (onDarkMode === 'true') {
-        console.log('Dark Mode retrieved via user preference');
-        // then switch to dark mode
-        bodyEl.classList.add("dark");
+        console.log('Dark Mode retrieved via user preference, button updating while navbar loads');
         toggleButton.innerHTML = `<span class="mr-4"><i class="bi bi-sun"></i></span>Light Mode`;
-    } else {
-        console.log('Light modee retrieved via user preference')
     }
-
 
     toggleButton.addEventListener("click", () => {
         console.log("toggle button clicked");
-        bodyEl.classList.toggle("dark");
+        htmlEl.classList.toggle("dark");
 
         // conditional for inner text change
-        if (bodyEl.classList.contains("dark")) {
+        if (htmlEl.classList.contains("dark")) {
             toggleButton.innerHTML = `<span class="mr-4"><i class="bi bi-sun"></i></span>Light Mode`;
 
             // store in local storage

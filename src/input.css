@@ -22,7 +22,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* apply dark styling for body */
-body {
+body, html {
     @apply bg-white font-lexend text-lg text-blac;
 
     @variant dark {
