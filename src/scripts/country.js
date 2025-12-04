@@ -50,7 +50,7 @@ window.addEventListener("load", async () => {
         selectedCountryObj[0].borders.forEach(borderCountryCode => {
             // create the element in the DOM
             const borderLabel = document.createElement('span');
-            borderLabel.classList.add('templateBorderLabel', 'px-2', 'py-1', 'rounded-lg', 'bg-peony', 'text-base');
+            borderLabel.classList.add('templateBorderLabel', 'px-2', 'py-1', 'rounded-lg', 'bg-peony', 'text-base', 'dark:text-blac', 'dark:border-2', 'dark:border-cream');
 
             // find the common name matching the country code
             const borderCountryObj = countryData.find(country => country.cca3 === borderCountryCode);
