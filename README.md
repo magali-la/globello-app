@@ -1,100 +1,83 @@
-# Frontend Mentor - REST Countries API with color theme switcher
+# Globello
 
-![Design preview for the REST Countries API with color theme switcher coding challenge](preview.jpg)
+#### A language app that allows users to explore different countries around the world and their languages, powered by the REST Countries API
 
-## Welcome! 👋
+<img src="./src/assets/globello.gif" alt="gif of the home page hero section on light and dark mode"/>
 
-Thanks for checking out this front-end coding challenge.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Description
+Globello is an MVP for a conceptual global language learning app. It features the REST Countries API to collect data on countries around the world. This app includes key information about countries: flags, common and official names, region, capitals, languages, and border countries. Users can click on country cards for more information. 
 
-**To do this challenge, you need a good understanding of HTML, CSS, and JavaScript.**
+Future iterations will include how to say hello in select languages when visiting a country page. This project was completed as part of an assignment in Per Scholas Full Stack Engineering Bootcamp.
 
-## The challenge
+Visit the live site: https://globello.netlify.app
 
-Your challenge is to integrate with the [REST Countries API](https://restcountries.com) to pull country data and display it like in the designs.
+## Table of Contents
+* [Tech Stack](#techstack)
+* [Features](#features)
+* [Design Process](#design)
+* [Project Next Steps](#nextsteps)
+* [Deployment](#deployment)
+* [About the Author](#author)
 
-You can use any JavaScript framework/library on the front-end such as [React](https://reactjs.org) or [Vue](https://vuejs.org). You also have complete control over which packages you use to do things like make HTTP requests or style your project.
+## <a name="techstack"></a>Tech Stack
+### Languages
+* JavaScript
+* HTML5
+* CSS3
+### Libraries
+* Tailwind CSS CLI
+### APIs
+* REST Countries API
+* Web Components API (Native API)
 
-Your users should be able to:
 
-- See all countries from the API on the homepage
-- Search for a country using an `input` field
-- Filter countries by region
-- Click on a country to see more detailed information on a separate page
-- Click through to the border countries on the detail page
-- Toggle the color scheme between light and dark mode *(optional)*
+## Features
+1. Fully responsive grid layout with country cards containing key information
+2. Search for countries by name
+3. Filter countries by Region
+4. View detailed information by clicking on countries
+5. View border countries and click on labels to open the detail page
+6. Light/Dark Mode toggle with saved preference in local storage
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+## Trello Planning
+To take a look at my planning process for general tasks and bugs, check out my Trello Board below:
+* https://trello.com/b/sGEq3iWP/per-scholas-project-1-magali 
 
-**⚠️ NOTE ⚠️: Sometimes the REST Countries API can go down. We've added a `data.json` file with all the country data if you prefer to use that instead. However, please be aware that the data in the JSON file might not be up-to-date.**
+## <a name="design"></a>Design Process
+The design phase of the project included creating a wireframe in Figma with the layout of the page, collecting assets, selecting colors, and choosing Google Fonts that aligned with the brand and product vision. These assets were plugged into my CSS as Tailwind theme directives for ease of use.
 
-## Where to find everything
+The colors were inspired by the gif I found with the hellos, which i transfered to figma to extract the hex values.
 
-Your task is to build out the project to the designs inside the `/design` folder. 
+In considering accessibility and readibility of body text, I chose the Lexend typeface for Globello's body text for its accessible properties. This is a highly readable typeface designed to benefit people of all abilities.
 
-In this challenge, you will find mobile and desktop designs in light and dark mode color schemes for both pages.
+### Fonts used
+* [Rock 3D](https://fonts.google.com/specimen/Rock+3D) - Globello Logotype
+* [Grandstander](https://fonts.google.com/specimen/Grandstander) - Headings
+* [Lexend](https://fonts.google.com/specimen/Lexend) - Body
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
 
-If you would like the Figma design file to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## <a name="nextsteps"></a>Project Next Steps
+These are a few upcoming features for Globello
+* How to say hello section for each country's detail page
+* Smooth scrolling for CTA button
 
-There are no assets for this challenge, as the country flags will be pulled from the [REST Countries API](https://restcountries.com) and you can use an icon font library for the icons.
+## <a name="deployment"></a>Deployment
+This app is hosted on Netlify
+[Live Site](https://globello.netlify.app)
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### Instructions to clone and run the project:
+This project uses Tailwind CSS CLI, and the output.css is not included in the repo. Netlify build command includes the watch command. Please follow the instructions to test the project locally
 
-## Building your project
+1. Clone the repository
+2. Run `npm install` to retrieve dev dependencies
+3. Run `npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch` to generate the output.css file
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
-
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
-
-## Deploying your project
-
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
-
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
-
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
-
-## Create a custom `README.md`
-
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
-
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi@frontendmentor.io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+## <a name="author"></a>About The Author
+Hi, I'm Magali. I'm a design-minded engineer with strengths in front-end development and UX design. I enjoy building products with accessibility in mind so that everyone can have access to information. This project allowed me to link my past experience as a language teacher, my design chops, and my skills in JavaScript to create an MVP for an exploratory learning tool that can be used by teachers and students.
+    
+## Works Cited:
+These sources helped me to create a navigation bar that was built with Web Components to persist across all pages of the app without repeating code.
+* https://developer.mozilla.org/en-US/docs/Web/API/Web_components
+* https://medium.com/@divyajain07/building-web-components-381af38a9cd
+* https://www.webcomponents.org/introduction#what-are-web-components 
