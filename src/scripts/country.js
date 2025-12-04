@@ -47,13 +47,35 @@ window.addEventListener("load", async () => {
     if (selectedCountryObj[0].borders.length === 0){
         bordersContainer.innerHTML = `<p class="italic">This country has no border countries.</p>`
     } else {
-        selectedCountryObj[0].borders.forEach(borderCountry => {
+        selectedCountryObj[0].borders.forEach(borderCountryCode => {
             // create the element in the DOM
             const borderLabel = document.createElement('span');
-            borderLabel.classList.add('templateLangLabel', 'px-2', 'py-1', 'rounded-lg', 'bg-peony', 'text-base');
-            borderLabel.innerText = borderCountry;
+            borderLabel.classList.add('templateBorderLabel', 'px-2', 'py-1', 'rounded-lg', 'bg-peony', 'text-base');
+
+            // find the common name matching the country code
+            const borderCountryObj = countryData.find(country => country.cca3 === borderCountryCode);
+            console.log(borderCountryObj);
+
+            borderLabel.innerText = borderCountryObj.name.common;
             // append it to the container
             bordersContainer.append(borderLabel);
         });
     };
+});
+
+// event listener for border Label
+document.addEventListener("click", (event) => {
+    if (event.target.closest('.templateBorderLabel')){
+        // define the label
+        const borderCountrySelected = event.target.closest('.templateBorderLabel');
+        // store the name from the label
+        console.log(borderCountrySelected);
+        const borderCountryName = borderCountrySelected.innerText;
+
+        // set it for local storage
+        localStorage.setItem('selectedCountry', borderCountryName);
+
+        // then reload the page again
+        window.location.reload();
+    }
 });
